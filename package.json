@@ -1,10 +1,10 @@
 {
   "name": "ts-node-express-template",
   "version": "1.0.0",
-  "description": "A template for basic node express applications using TypeScript",
+  "description": "A template for basic node express applications using TypeScript and best practices.",
   "scripts": {
-    "dev": "DEBUG=app:* nodemon --watch 'src/**/*.ts' --exec tsx src/server.ts",
-    "start": "NODE_ENV=production node dist/index.js",
+    "start:dev": "DEBUG=app:* nodemon --watch 'src/**/*.ts' --exec tsx src/server.ts",
+    "start:prod": "pm2-runtime start ecosystem.config.js --env production",
     "build": "tsc"
   },
   "repository": {
@@ -23,7 +23,7 @@
     "email": "contact@logantm.com"
   },
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/logan-tm/ts-node-express-template/issues"
   },
@@ -35,9 +35,13 @@
     "express": "^5.1.0",
     "http-errors": "^2.0.0",
     "morgan": "^1.10.0",
+    "pm2": "^6.0.5",
     "tsx": "^4.19.3"
   },
   "devDependencies": {
+    "@tsconfig/node20": "^20.1.5",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/debug": "^4.1.12",
     "@types/express": "^5.0.1",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.14.1",
