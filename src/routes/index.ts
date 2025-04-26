@@ -2,6 +2,7 @@ import express from 'express';
 import debug from 'debug';
 import BadRequestError from '../lib/errors/BadRequestError';
 
+// [/api/v1]
 const router = express.Router();
 
 router.get('/', (req, res) => {

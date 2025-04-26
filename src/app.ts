@@ -8,7 +8,7 @@ import expressWinstonMiddleware from './middlewares/logging';
 
 // Setup
 const app = express();
-const inDevelopment = process.env.NODE_ENV === 'development';
+// const inDevelopment = process.env.NODE_ENV === 'development';
 
 // Middlewares
 app.use(expressWinstonMiddleware);
