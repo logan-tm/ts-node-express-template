@@ -1,21 +1,17 @@
 import express from 'express';
-import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 
 import errorHandler from './middlewares/errors';
 import indexRouter from './routes/index';
 import NotFoundError from './lib/errors/NotFoundError';
+import expressWinstonMiddleware from './middlewares/logging';
 
 // Setup
 const app = express();
 const inDevelopment = process.env.NODE_ENV === 'development';
 
-if (inDevelopment) {
-  console.log('Development mode');
-  app.use(morgan('dev'));
-}
-
 // Middlewares
+app.use(expressWinstonMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());

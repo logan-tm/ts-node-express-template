@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "A template for basic node express applications using TypeScript and best practices.",
   "scripts": {
-    "start:dev": "DEBUG=app:* nodemon --watch 'src/**/*.ts' --exec tsx src/server.ts",
+    "start:dev:debug": "DEBUG=app:* nodemon --watch 'src/**/*.ts' --exec tsx src/server.ts",
+    "start:dev": "nodemon --watch 'src/**/*.ts' --exec tsx src/server.ts",
     "start:prod": "pm2-runtime start ecosystem.config.js --env production",
+    "stop:prod": "pm2 stop ecosystem.config.js --env production",
     "build": "tsc"
   },
   "repository": {
@@ -29,14 +31,16 @@
   },
   "homepage": "https://github.com/logan-tm/ts-node-express-template#readme",
   "dependencies": {
+    "chalk": "^5.4.1",
     "cookie-parser": "^1.4.7",
     "debug": "^4.4.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "http-errors": "^2.0.0",
+    "express-winston": "^4.2.0",
     "morgan": "^1.10.0",
     "pm2": "^6.0.5",
-    "tsx": "^4.19.3"
+    "tsx": "^4.19.3",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.5",
