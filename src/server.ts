@@ -14,5 +14,5 @@ app.listen(port, () => {
 });
 
 process.on('exit', () => {
-  logger.info('\n\nServer is shutting down. Goodbye!');
+  logger.info('Server is shutting down. Goodbye!');
 });
