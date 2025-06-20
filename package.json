@@ -33,9 +33,11 @@
   "dependencies": {
     "chalk": "^5.4.1",
     "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "debug": "^4.4.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
     "express-winston": "^4.2.0",
     "helmet": "^8.1.0",
     "morgan": "^1.10.0",
@@ -47,6 +49,7 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.5",
     "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.19",
     "@types/debug": "^4.1.12",
     "@types/express": "^5.0.1",
     "@types/morgan": "^1.9.9",

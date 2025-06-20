@@ -31,8 +31,8 @@ Error Handling & Reliability
 
 Performance & Scalability
 
-- [ ] Rate Limiting
-- [ ] Response caching strategies (Redis, in-memory)
+- [x] Rate Limiting
+- [ ] ~~Response caching strategies (Redis, in-memory)~~
 - [ ] Database query optimization and indexing
 - [ ] Connection pooling for databases
 - [ ] Compression middleware (gzip)
